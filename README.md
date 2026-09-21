@@ -3,6 +3,11 @@
 > **GenAI 기초 2 : 멀티모달 콘텐츠 제작 (AI-B1-2 과제)**
 > 가상 브랜드 **RAUM(라움)** · 무선 저소음 헤어드라이기 · 10초 광고 영상 (16:9 / 9:16)
 
+<p align="center">
+  <img src="images/scene_overview.jpg" alt="RAUM 광고 3개 씬: 문제 제시, 해결 제시, 브랜드 각인" width="100%">
+</p>
+<p align="center"><sub>문제 제시 → 해결 제시 → 브랜드 각인 · 씬별 키비주얼 (Gemini 생성)</sub></p>
+
 ---
 
 ## 프로젝트 한눈에 보기
@@ -26,6 +31,7 @@
 | `RAUM_기획서_최종본.pdf` | 제출용 기획서 (PDF) |
 | `B-2_최종편집영상_이혜경(가로).mp4` | 최종 영상 · 16:9 가로형 |
 | `B-2_최종편집영상_이혜경(세로).mp4` | 최종 영상 · 9:16 세로형 |
+| `images/` | README에 사용한 이미지 (기획서 PDF에서 추출·편집) |
 
 ---
 
@@ -184,6 +190,11 @@
 | 배색 | 화이트 · 라이트블루 · 실버 |
 | 설계 의도 | 작은 화면에서도 잘 인지되도록 단순하게 설계 |
 
+<p align="center">
+  <img src="images/raum_logo_detail.jpg" alt="RAUM 드라이기 본체에 새겨진 로고 확대" width="480">
+</p>
+<p align="center"><sub>제품 본체에 반영된 RAUM 워드마크와 심볼 (Scene 3 이미지 확대, Gemini 생성)</sub></p>
+
 ### 1-3. 기획 의도와 스토리라인
 
 기존 유선 드라이기의 **전선 불편함과 소음 문제**를 짧고 강하게 제시한 뒤, RAUM의 **무선성과 저소음 기능으로 문제가 자연스럽게 해결되는 과정**을 10초 영상으로 전달합니다.
@@ -242,11 +253,15 @@ flowchart LR
 
 ### 2-4. 실제 작업 화면
 
-> 📷 **[이미지 삽입 위치]** Runway 작업 화면 — `Custom → 이미지 업로드 → 프롬프트 입력 → Gen-4 Turbo → Generate` (영상 생성 진행률 75% 표시)
-> <!-- ![Runway 작업 화면](images/runway_workflow.png) -->
+<p align="center">
+  <img src="images/runway_workflow.jpg" alt="Runway 작업 화면: Gen-4 Turbo로 영상 생성 중 (75%)" width="100%">
+</p>
+<p align="center"><sub><b>Runway 작업 화면</b> — Custom → 이미지 업로드 → 프롬프트 입력 → Gen-4 Turbo → Generate (영상 생성 진행률 75% 표시)</sub></p>
 
-> 📷 **[이미지 삽입 위치]** VideoStew 작업 화면 — Scene 2 슬라이드 편집 중. 자막·나레이션 "선 없이 더욱 자유롭게, 조용하게." 배치, 재생시간 4초, 전환효과 Auto(0.3s) 설정 모습
-> <!-- ![VideoStew 작업 화면](images/videostew_workflow.png) -->
+<p align="center">
+  <img src="images/videostew_workflow.jpg" alt="VideoStew 작업 화면: Scene 2 슬라이드 편집" width="100%">
+</p>
+<p align="center"><sub><b>VideoStew 작업 화면</b> — Scene 2 슬라이드 편집 중. 자막·나레이션 "선 없이 더욱 자유롭게, 조용하게." 배치, 재생시간 4초, 전환효과 Auto(0.3s) 설정 모습</sub></p>
 
 ---
 
@@ -274,7 +289,10 @@ Scene 1(3초) + Scene 2(4초) + Scene 3(3.9초)를 각각 개별 영상으로 �
 | **사용 도구 흐름** | Gemini(키비주얼) → Runway(Custom · Gen-4 Turbo 모션 변환) → VideoStew(나레이션 '가현', 자막·BGM 삽입, 전환 Auto, 3초 렌더링) |
 | **출력 결과 요약** | 인물의 표정과 엉킨 전선이 3초 안에 각인되고, 다음 씬과 명확히 대비되는 긴장된 톤 확보. 화면·나레이션·자막에 목표 메시지가 일관되게 반영됨 |
 
-> 📷 **[이미지 삽입 위치]** Scene 1 키비주얼 <!-- ![Scene 1](images/scene01_keyvisual.png) -->
+<p align="center">
+  <img src="images/scene01_keyvisual.jpg" alt="Scene 1 키비주얼" width="720">
+</p>
+<p align="center"><sub>Scene 1 키비주얼 — 짧고 팽팽한 전선에 움직임이 묶인 인물 (Gemini 생성)</sub></p>
 
 <details>
 <summary><b>Scene 1 프롬프트 원문 (최종) 펼치기</b></summary>
@@ -305,7 +323,10 @@ Wide shot in a clean, bright bathroom, slowly zooming in toward a woman visibly 
 | **사용 도구 흐름** | Gemini(제품 히어로샷·인물 이미지, Scene 1 이미지를 참조 이미지로 첨부, 브랜드명·로고 직접 반영) → Runway(손동작·바람 흐름 모션) → VideoStew(나레이션·자막·BGM, 전환 Auto, 4초 렌더링) |
 | **출력 결과 요약** | 무선·저소음이 시각·청각으로 동시에 전달되고, 브랜드명·로고가 제품 표면에 자연스럽게 노출됨. Scene 1 대비 긴장 → 편안 톤 전환 확인 |
 
-> 📷 **[이미지 삽입 위치]** Scene 2 키비주얼 <!-- ![Scene 2](images/scene02_keyvisual.png) -->
+<p align="center">
+  <img src="images/scene02_keyvisual.jpg" alt="Scene 2 키비주얼" width="720">
+</p>
+<p align="center"><sub>Scene 2 키비주얼 — RAUM 무선 드라이기를 쓰며 미소 짓는 동일 인물 (Gemini 생성)</sub></p>
 
 <details>
 <summary><b>Scene 2 프롬프트 원문 (최종) 펼치기</b></summary>
@@ -336,7 +357,10 @@ Medium shot, slowly dollying in toward a woman comfortably using a sleek cordles
 | **사용 도구 흐름** | Gemini(제품 단독 히어로샷, 스타일 참조 이미지 함께 입력, 브랜드명·로고 반영) → Runway(매크로 클로즈업 → 풀백 모션) → VideoStew(변경된 나레이션·자막, BGM 페이드아웃, 3.9초 렌더링) |
 | **출력 결과 요약** | 핵심 혜택을 마지막으로 각인. 브랜드명·로고는 제품 이미지 자체에 반영되어 있어, 나레이션·자막이 슬로건 대신 제품 혜택을 직접 전달하는 방식으로 마무리 |
 
-> 📷 **[이미지 삽입 위치]** Scene 3 키비주얼 <!-- ![Scene 3](images/scene03_keyvisual.png) -->
+<p align="center">
+  <img src="images/scene03_keyvisual.jpg" alt="Scene 3 키비주얼" width="720">
+</p>
+<p align="center"><sub>Scene 3 키비주얼 — 충전 거치대 위 RAUM 제품 히어로샷 (Gemini 생성)</sub></p>
 
 <details>
 <summary><b>Scene 3 프롬프트 원문 (최종) 펼치기</b></summary>
@@ -490,7 +514,7 @@ flowchart LR
 
 | 단계 | 네이밍 규칙 | 예시 |
 | --- | --- | --- |
-| Gemini 원본 이미지 | `scene0{n}_keyvisual.png` | `scene01_keyvisual.png` |
+| Gemini 원본 이미지 | `scene0{n}_keyvisual.png` (또는 `.jpg`) | `scene01_keyvisual.jpg` |
 | Runway 변환 영상 (원본) | `scene0{n}_motion.mp4` | `scene02_motion.mp4` |
 | VideoStew 개별 렌더링본 | `scene0{n}_final_{길이}.mp4` | `scene03_final_3.9s.mp4` |
 | 최종 통합본 (가로/세로) | `B-2_최종편집영상_이혜경(방향).mp4` | `B-2_최종편집영상_이혜경(가로).mp4` |
